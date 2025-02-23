@@ -2,7 +2,7 @@ group 'com.stark.flutter_kronos'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '2.0.0'
+    ext.kotlin_version = '2.1.10'
     repositories {
         google()
         mavenCentral()
@@ -33,7 +33,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdk 34
     }
     lintOptions {
         disable 'InvalidPackage'
@@ -42,7 +42,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    compileSdk 34
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    compileSdk 35
     buildToolsVersion '35.0.0'
 }
 
